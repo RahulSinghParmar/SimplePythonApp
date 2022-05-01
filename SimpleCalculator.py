@@ -3,8 +3,8 @@ import PySimpleGUI as sg
 
 def create_window(theme):
     sg.theme(theme)
-    sg.set_options(font='Franklin 32', button_element_size=(2, 1))
-    button_size = (2, 1)
+    sg.set_options(font='Franklin 32', button_element_size=(3, 1))
+    button_size = (3, 1)
     layout = [
         [sg.Text(
             '0',
@@ -15,14 +15,14 @@ def create_window(theme):
             right_click_menu=theme_menu,
             key='-TEXT-')
         ],
-        [sg.Button('C', expand_x=True), sg.Button('=', expand_x=True)],
+        [sg.Button('Exit', expand_x=True), sg.Button('C', size=button_size), sg.Button('+', size=button_size)],
         [sg.Button(7, size=button_size), sg.Button(8, size=button_size), sg.Button(9, size=button_size),
          sg.Button('*', size=button_size)],
         [sg.Button(4, size=button_size), sg.Button(5, size=button_size), sg.Button(6, size=button_size),
          sg.Button('/', size=button_size)],
         [sg.Button(1, size=button_size), sg.Button(2, size=button_size), sg.Button(3, size=button_size),
          sg.Button('-', size=button_size)],
-        [sg.Button(0, expand_x=True), sg.Button('.', size=button_size), sg.Button('+', size=button_size)],
+        [sg.Button(0, expand_x=True), sg.Button('.', size=button_size), sg.Button('=', size=button_size)],
     ]
 
     return sg.Window('Calculator', layout)
@@ -64,5 +64,8 @@ while True:
         current_num = []
         full_operation = []
         window['-TEXT-'].update('0')
+
+    elif event == sg.WIN_CLOSED or event == 'Exit':  # inbuild function for make the app exit
+        break
 
 window.close()
