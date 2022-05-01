@@ -1,5 +1,8 @@
 # SimplePythonApp
-its an python project building a simple apps using PySimpleGui  
+it's a python project building a simple apps using PySimpleGui  
 
-test for new 
-changes
+Installation required
+
+* python
+* PySimpleGUI
+* python-tk
