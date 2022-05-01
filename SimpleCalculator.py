@@ -7,7 +7,7 @@ def create_window(theme):
     button_size = (2, 1)
     layout = [
         [sg.Text(
-            '',
+            '0',
             font='Franklin 40',
             justification='right',
             expand_x=True,
@@ -52,7 +52,7 @@ while True:
         full_operation.append(''.join(current_num))
         current_num = []
         full_operation.append(event)
-        window['-TEXT-'].update('')
+        window['-TEXT-'].update(num_string)
 
     if event == '=':
         full_operation.append(''.join(current_num))
@@ -63,6 +63,6 @@ while True:
     if event == 'C':
         current_num = []
         full_operation = []
-        window['-TEXT-'].update('')
+        window['-TEXT-'].update('0')
 
 window.close()
