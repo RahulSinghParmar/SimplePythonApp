@@ -18,7 +18,7 @@ sg.theme('GrayGrayGray')
 layout = [
     [sg.Menu(menu_layout)],
     [sg.Text('Untitled', key='-DOCNAME-')],
-    [sg.Multiline(no_scrollbar=True, size=(40, 30), key='-TEXTBOX-')]
+    [sg.Multiline(no_scrollbar=True, size=(50, 40), key='-TEXTBOX-')]
 ]
 
 window = sg.Window('Text Editor', layout)
