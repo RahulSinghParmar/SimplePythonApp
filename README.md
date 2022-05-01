@@ -6,3 +6,5 @@ Installation required
 * python
 * PySimpleGUI
 * python-tk
+* matplotlib
+* pillow
