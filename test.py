@@ -1,3 +1,4 @@
+"""
 import PySimpleGUI as sg
 
 layout = [[sg.Text('My Window')],
@@ -14,3 +15,4 @@ while True:
       window['-GO-'].update(button_color = ('black','yellow'))
 
 window.close()
+"""
