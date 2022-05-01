@@ -8,3 +8,7 @@ Installation required
 * python-tk
 * matplotlib
 * pillow
+* pytube
+* opencv-python
+* beautifulsoup4
+* requests
